@@ -1,0 +1,103 @@
+[0.666s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build'][0m
+[0.666s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fbd221f4850>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fbd221f5660>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fbd221f5660>>)[0m
+[0.696s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.696s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.696s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.696s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.696s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.696s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.696s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg'
+[0.696s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.697s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.697s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.697s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.697s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.697s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.697s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.697s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.697s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage '.' with type 'ros.ament_cmake' and name 'autogen_pkg'[0m
+[0.705s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.705s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.705s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.705s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.705s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.762s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.762s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.789s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 396 installed packages in /opt/ros/humble[0m
+[0.790s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'autogen_pkg' build argument 'cmake_args' from command line to 'None'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'autogen_pkg' build argument 'cmake_target' from command line to 'None'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'autogen_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'autogen_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'autogen_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'autogen_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'autogen_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'autogen_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'autogen_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'autogen_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg', 'merge_install': False, 'path': '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg', 'symlink_install': False, 'test_result_base': None}[0m
+[0.865s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.875s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.875s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg' with build type 'ament_cmake'
+[0.875s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg'
+[0.886s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.886s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.886s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.910s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg -DCMAKE_INSTALL_PREFIX=/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg[0m
+[1.614s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg -DCMAKE_INSTALL_PREFIX=/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg[0m
+[1.615s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake --build /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg -- -j16 -l16[0m
+[1.641s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake --build /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg -- -j16 -l16[0m
+[1.694s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake --install /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg[0m
+[1.715s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(autogen_pkg)
+[1.715s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake --install /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg[0m
+[1.727s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg' for CMake module files
+[1.727s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg' for CMake config files
+[1.727s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('autogen_pkg', 'cmake_prefix_path')
+[1.737s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/hook/cmake_prefix_path.ps1'
+[1.737s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/hook/cmake_prefix_path.dsv'
+[1.737s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/hook/cmake_prefix_path.sh'
+[1.738s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/bin'
+[1.738s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/lib/pkgconfig/autogen_pkg.pc'
+[1.738s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/lib/python3.10/site-packages'
+[1.738s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/bin'
+[1.748s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.ps1'
+[1.748s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.dsv'
+[1.748s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.sh'
+[1.749s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.bash'
+[1.749s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.zsh'
+[1.749s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/colcon-core/packages/autogen_pkg)
+[1.795s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(autogen_pkg)
+[1.804s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg' for CMake module files
+[1.805s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg' for CMake config files
+[1.805s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('autogen_pkg', 'cmake_prefix_path')
+[1.814s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/hook/cmake_prefix_path.ps1'
+[1.815s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/hook/cmake_prefix_path.dsv'
+[1.815s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/hook/cmake_prefix_path.sh'
+[1.815s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/bin'
+[1.815s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/lib/pkgconfig/autogen_pkg.pc'
+[1.815s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/lib/python3.10/site-packages'
+[1.815s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/bin'
+[1.825s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.ps1'
+[1.826s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.dsv'
+[1.826s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.sh'
+[1.826s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.bash'
+[1.826s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.zsh'
+[1.826s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/colcon-core/packages/autogen_pkg)
+[1.826s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[1.827s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[1.827s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[1.827s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[1.840s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.840s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.840s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[1.854s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[1.865s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/local_setup.ps1'
+[1.866s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/_local_setup_util_ps1.py'
+[1.867s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/setup.ps1'
+[1.877s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/local_setup.sh'
+[1.877s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/_local_setup_util_sh.py'
+[1.877s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/setup.sh'
+[1.887s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/local_setup.bash'
+[1.887s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/setup.bash'
+[1.897s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/local_setup.zsh'
+[1.897s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/setup.zsh'

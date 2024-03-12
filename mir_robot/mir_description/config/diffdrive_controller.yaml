@@ -1,0 +1,87 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100 #41.2 #30
+    use_sim_time: true
+
+    diff_cont:
+      type: diff_drive_controller/DiffDriveController
+
+    joint_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+
+diff_cont:
+  ros__parameters:
+
+    #type        : "diff_drive_controller/DiffDriveController"
+    left_wheel_names  : ["left_wheel_joint"] #['${prefix}left_wheel_joint'] #'$(arg prefix)left_wheel_joint'    ##------------------ CHECK SYNTAX FOR XML AND YAML
+    right_wheel_names : ["right_wheel_joint"] #['${prefix}right_wheel_joint'] #'$(arg prefix)right_wheel_joint' 
+    publish_rate: 41.2               # this is what the real MiR platform publishes (default: 50)
+    # These covariances are exactly what the real MiR platform publishes
+    pose_covariance_diagonal : [0.00001, 0.00001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
+    twist_covariance_diagonal: [0.1, 0.1, 1000000.0, 1000000.0, 1000000.0, 1000.0]
+    enable_odom_tf: true
+
+    # Wheel separation and diameter. These are both optional.
+    # diff_drive_controller will attempt to read either one or both from the
+    # URDF if not specified as a parameter
+    wheel_separation : 0.445208 #0.403   #0.445208
+    wheel_radius : 0.100   #0.0625
+
+    # Wheel separation and radius multipliers
+    wheel_separation_multiplier: 1.0 # default: 1.0
+    wheel_radius_multiplier    : 1.0 # default: 1.0
+
+    # Velocity commands timeout [s], default 0.5
+    cmd_vel_timeout: 0.5
+    use_stamped_vel: false
+
+    # frame_ids (same as real MiR platform)
+    base_frame_id: base_footprint #$(arg prefix)base_footprint # default: base_link
+    odom_frame_id: odom      # default: odom
+
+    # Velocity and acceleration limits
+    # Whenever a min_* is unspecified, default to -max_*
+    linear:
+      x:
+        has_velocity_limits    : true
+        max_velocity           : 1.0  # m/s; move_base max_vel_x: 0.8
+        has_acceleration_limits: true
+        max_acceleration       : 2.0  # m/s^2; move_base acc_lim_x: 1.5
+    angular:
+      z:
+        has_velocity_limits    : true
+        max_velocity           : 1.5  # rad/s; move_base max_rot_vel: 1.0
+        has_acceleration_limits: true
+        max_acceleration       : 2.5  # rad/s^2; move_base acc_lim_th: 2.0
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - ur_shoulder_pan_joint
+      - ur_shoulder_lift_joint
+      - ur_elbow_joint
+      - ur_wrist_1_joint
+      - ur_wrist_2_joint
+      - ur_wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 100.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      ur_shoulder_pan_joint: { trajectory: 0.2, goal: 0.1 }
+      ur_shoulder_lift_joint: { trajectory: 0.2, goal: 0.1 }
+      ur_elbow_joint: { trajectory: 0.2, goal: 0.1 }
+      ur_wrist_1_joint: { trajectory: 0.2, goal: 0.1 }
+      ur_wrist_2_joint: { trajectory: 0.2, goal: 0.1 }
+      ur_wrist_3_joint: { trajectory: 0.2, goal: 0.1 }

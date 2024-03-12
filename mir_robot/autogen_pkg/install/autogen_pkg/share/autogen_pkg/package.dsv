@@ -1,0 +1,8 @@
+source;share/autogen_pkg/hook/cmake_prefix_path.ps1
+source;share/autogen_pkg/hook/cmake_prefix_path.dsv
+source;share/autogen_pkg/hook/cmake_prefix_path.sh
+source;share/autogen_pkg/local_setup.bash
+source;share/autogen_pkg/local_setup.dsv
+source;share/autogen_pkg/local_setup.ps1
+source;share/autogen_pkg/local_setup.sh
+source;share/autogen_pkg/local_setup.zsh

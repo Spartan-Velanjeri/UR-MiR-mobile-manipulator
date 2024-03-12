@@ -1,0 +1,62 @@
+[0.035s] Invoking command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg -DCMAKE_INSTALL_PREFIX=/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg
+[0.088s] -- The C compiler identification is GNU 11.4.0
+[0.141s] -- The CXX compiler identification is GNU 11.4.0
+[0.150s] -- Detecting C compiler ABI info
+[0.225s] -- Detecting C compiler ABI info - done
+[0.238s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.239s] -- Detecting C compile features
+[0.239s] -- Detecting C compile features - done
+[0.247s] -- Detecting CXX compiler ABI info
+[0.318s] -- Detecting CXX compiler ABI info - done
+[0.325s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.325s] -- Detecting CXX compile features
+[0.325s] -- Detecting CXX compile features - done
+[0.330s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.615s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.676s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.724s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.724s] -- Configured cppcheck include dirs: 
+[0.724s] -- Configured cppcheck exclude dirs and/or files: 
+[0.725s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.725s] -- Added test 'lint_cmake' to check CMake code style
+[0.726s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.728s] -- Added test 'uncrustify' to check C / C++ code style
+[0.728s] -- Configured uncrustify additional arguments: 
+[0.729s] -- Added test 'xmllint' to check XML markup files
+[0.729s] -- Configuring done (0.7s)
+[0.731s] -- Generating done (0.0s)
+[0.732s] -- Build files have been written to: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg
+[0.739s] Invoked command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg -DCMAKE_INSTALL_PREFIX=/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg
+[0.739s] Invoking command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake --build /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg -- -j16 -l16
+[0.766s] Invoked command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake --build /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg -- -j16 -l16
+[0.819s] Invoking command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake --install /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg
+[0.835s] -- Install configuration: ""
+[0.835s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/ament_index/resource_index/package_run_dependencies/autogen_pkg
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/ament_index/resource_index/parent_prefix_path/autogen_pkg
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/environment/ament_prefix_path.sh
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/environment/ament_prefix_path.dsv
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/environment/path.sh
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/environment/path.dsv
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/local_setup.bash
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/local_setup.sh
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/local_setup.zsh
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/local_setup.dsv
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.dsv
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/ament_index/resource_index/packages/autogen_pkg
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/cmake/autogen_pkgConfig.cmake
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/cmake/autogen_pkgConfig-version.cmake
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/package.xml
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/include
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/include/autogen_pkg
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/launch
+[0.836s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/launch/autogen_pkg.launch.py
+[0.837s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/src
+[0.837s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/urdf
+[0.837s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/urdf/.gitkeep
+[0.837s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/urdf/mir_100_v1.urdf.xacro
+[0.837s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/config
+[0.837s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/rviz
+[0.837s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/rviz/default.rviz
+[0.837s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/meshes
+[0.837s] -- Installing: /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/install/autogen_pkg/share/autogen_pkg/meshes/.gitkeep
+[0.840s] Invoked command in '/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/not_windows/.local/bin/cmake --install /home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg
