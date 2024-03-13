@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<robot name="test_model" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="base_footprint"/>
+
+  <link name="base_link">
+    <visual>
+      <origin rpy="0 0 0 " xyz="0 0 0.005"/>
+      <geometry>
+          <box size="0.4 0.4 0.01"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 0 " xyz="0 0 0.005"/>
+      <geometry>
+        <box size="0.4 0.4 0.01"/>
+      </geometry>
+    </collision>
+    
+    <inertial>
+      <origin rpy="0 0 0 " xyz="0 0 0.005"/>
+      <geometry>
+        <box size="0.4 0.4 0.01"/>
+      </geometry>
+      <mass value="100"/>
+      <inertia ixx="1.0265" ixy="0" ixz="0" iyy="1.3944999999999999" iyz="0" izz="2.1320000000000001"/>
+    </inertial>
+  </link>
+
+  <joint name="footprint_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+
+  <xacro:macro name="T265_fisheye" params="sensor_name reference_frame topic rate">
+    <gazebo reference="${reference_frame}">
+      <sensor name="camera" type="wideanglecamera">
+        <camera>
+          <horizontal_fov>2.84488</horizontal_fov>
+          <image>
+            <width>800</width>
+            <height>848</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+          <lens>
+            <type>custom</type>
+            <custom_function>
+              <c1>1.05</c1>
+              <c2>4</c2>
+              <f>1.0</f>
+              <fun>tan</fun>
+            </custom_function>
+            <scale_to_hfov>true</scale_to_hfov>
+            <cutoff_angle>3.1415</cutoff_angle>
+            <env_texture_size>512</env_texture_size>
+          </lens>
+          <always_on>true</always_on>
+          <update_rate>30</update_rate>
+        </camera>
+        <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+          <always_on>true</always_on>
+          <update_rate>${rate}</update_rate>
+          <camera_name>${sensor_name}/${topic}</camera_name>
+          <image_topic_name>image_raw</image_topic_name>
+          <camera_info_topic_name>camera_info</camera_info_topic_name>
+          <frame_name>${reference_frame}</frame_name>
+          <hack_baseline>0.07</hack_baseline>
+          <distortion_k1>-0.007419134024530649</distortion_k1>
+          <distortion_k2>0.041209351271390915</distortion_k2>
+          <distortion_k3>-0.03811917081475258</distortion_k3>
+          <distortion_t1>0.006366158835589886</distortion_t1>
+          <distortion_t2>0.0</distortion_t2>
+          <Cx_prime>416.00531005859375</Cx_prime>
+          <Cx>16.00531005859375</Cx>
+          <Cy>403.38909912109375</Cy>
+        </plugin>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+  <!-- INTEL REALSENSE T265 -->
+
+  <xacro:property name="sensor_name" value="camera"/>
+  <xacro:property name="parent_link" value="base_link"/>
+  <xacro:property name="rate" value="30.0"/>
+
+  <link name="${sensor_name}_odom_frame"/>
+  
+  <joint name="${sensor_name}_odom_frame_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0.5"/>
+      <parent link="${parent_link}"/>
+      <child link="${sensor_name}_odom_frame"/>
+  </joint>
+
+  <link name="${sensor_name}_pose_frame">
+      <visual>
+          <origin rpy="1.57 0 1.57" xyz="0 0 0"/>
+          <geometry>
+              <mesh filename="file://$(find realsense_ros2_gazebo)/meshes/realsense_t265.stl" scale="0.001 0.001 0.001"/>
+          </geometry>
+      </visual>
+
+      <collision>
+          <geometry>
+              <box size="0.013 0.108 0.024"/>
+          </geometry>
+      </collision>
+      
+      <inertial>
+          <mass value="0.055"/>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <inertia ixx="9.108e-05"
+                    ixy="0"
+                    ixz="0"
+                    iyy="2.51e-06"
+                    iyz="0"
+                    izz="8.931e-05"/>
+      </inertial>
+  </link>
+
+  <joint name="${sensor_name}_pose_frame_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/> <!-- check on real hw -->
+      <parent link="${sensor_name}_odom_frame"/>
+      <child link="${sensor_name}_pose_frame"/>
+  </joint>
+
+  <link name="${sensor_name}_link"/>
+
+  <joint name="${sensor_name}_joint" type="fixed">
+      <parent link="${sensor_name}_pose_frame"/>
+      <child link="${sensor_name}_link"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/> <!-- check on real hw -->
+  </joint>
+
+  <!-- first camera -->
+
+  <link name="${sensor_name}_fisheye1_frame"/>
+
+  <joint name="${sensor_name}_fisheye1_joint" type="fixed">
+      <parent link="${sensor_name}_link"/>
+      <child link="${sensor_name}_fisheye1_frame"/>
+      <origin rpy="0 0 0" xyz="0 0.042 0"/>
+  </joint>
+
+  <link name="${sensor_name}_fisheye1_optical_frame"/>
+
+  <joint name="${sensor_name}_fisheye1_optical_joint" type="fixed">
+      <parent link="${sensor_name}_fisheye1_frame"/>
+      <child link="${sensor_name}_fisheye1_optical_frame"/>
+      <origin rpy="0 0 0" xyz="0.01 0 0"/>
+  </joint>
+
+  <xacro:T265_fisheye
+    sensor_name="${sensor_name}"
+    reference_frame="${sensor_name}_fisheye1_optical_frame"
+    topic="fisheye1"
+    rate="${rate}">
+  </xacro:T265_fisheye>
+
+  <!-- second camera -->
+
+  <link name="${sensor_name}_fisheye2_frame"/>
+
+  <joint name="${sensor_name}_fisheye2_joint" type="fixed">
+      <parent link="${sensor_name}_link"/>
+      <child link="${sensor_name}_fisheye2_frame"/>
+      <origin rpy="0 0 0" xyz="0 -0.022 0"/>
+  </joint>
+
+  <link name="${sensor_name}_fisheye2_optical_frame"/>
+
+  <joint name="${sensor_name}_fisheye2_optical_joint" type="fixed">
+      <parent link="${sensor_name}_fisheye2_frame"/>
+      <child link="${sensor_name}_fisheye2_optical_frame"/>
+      <origin rpy="0 0 0" xyz="0.01 0 0"/>
+  </joint>
+
+  <xacro:T265_fisheye
+    sensor_name="${sensor_name}"
+    reference_frame="${sensor_name}_fisheye2_optical_frame"
+    topic="fisheye2"
+    rate="${rate}">
+  </xacro:T265_fisheye>
+
+  <!-- IMU -->
+
+  <link name="${sensor_name}_gyro_frame"/>
+  
+  <joint name="${sensor_name}_gyro_joint" type="fixed">
+      <parent link="${sensor_name}_link"/>
+      <child link="${sensor_name}_gyro_frame"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/> <!-- check on real hw -->
+  </joint>
+
+  <link name="${sensor_name}_accel_frame"/> <!-- dummy -->
+  
+  <joint name="${sensor_name}_accel_joint" type="fixed">
+      <parent link="${sensor_name}_link"/>
+      <child link="${sensor_name}_accel_frame"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/> <!-- check on real hw -->
+  </joint>
+
+  <gazebo reference="${sensor_name}_gyro_frame">
+      <gravity>true</gravity>
+      <sensor name="${sensor_name}_imu" type="imu">
+          <always_on>true</always_on>
+          <update_rate>${rate}</update_rate>
+          <visualize>true</visualize>
+          <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+              <initial_orientation_as_reference>false</initial_orientation_as_reference>
+              <topic_name>${sensor_name}/gyro/sample</topic_name>
+              <body_name>${sensor_name}_pose_frame</body_name>
+              <update_rate_HZ>${rate}</update_rate_HZ>
+              <gaussian_noise>0.000001</gaussian_noise>
+              <xyz_offset>0 0 0</xyz_offset>
+              <rpy_offset>0 0 0</rpy_offset>
+              <frame_name>${sensor_name}_link</frame_name>
+          </plugin>
+      </sensor>
+  </gazebo>
+
+  <!-- localization -->
+
+  <gazebo>
+      <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+          <always_on>true</always_on>
+          <update_rate>${rate}</update_rate>
+          <body_name>base_footprint</body_name>
+          <topic_name>${sensor_name}/odom/sample</topic_name>
+          <gaussian_noise>0.001</gaussian_noise>
+          <frame_name>world</frame_name>
+          <xyz_offset>0 0 0</xyz_offset>
+          <rpy_offset>0 0 0</rpy_offset>
+      </plugin>
+  </gazebo>
+
+</robot>

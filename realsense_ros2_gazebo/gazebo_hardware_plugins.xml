@@ -1,0 +1,10 @@
+<library path="gazebo_hardware_plugins">
+  <class
+    name="realsense_ros2_gazebo/GazeboSystem"
+    type="realsense_ros2_gazebo::GazeboSystem"
+    base_class_type="realsense_ros2_gazebo::GazeboSystemInterface">
+    <description>
+      GazeboRealsense
+    </description>
+  </class>
+</library>

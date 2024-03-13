@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package format="2">
+
+  <name>realsense_ros2_gazebo</name>
+  <version>1.0.0</version>
+
+  <description>Gazebo plugin for Intel RealSense cameras.</description>
+
+  <license>GNU GPL v3.0</license>
+
+  <maintainer email="isl.torvergata@gmail.com">Intelligent Systems Lab</maintainer>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>camera_info_manager</depend>
+  <!-- <depend>diagnostic_updater</depend> -->
+  <!-- <depend>gazebo_dev</depend> -->
+  <!-- <depend>gazebo_msgs</depend> -->
+  <depend>gazebo_ros</depend>
+  <!-- <depend>geometry_msgs</depend> -->
+  <depend>image_transport</depend>
+  <depend>rclcpp</depend>
+  <!-- <depend>rclcpp_components</depend> -->
+  <depend>sensor_msgs</depend>
+  <!-- <depend>std_msgs</depend> -->
+  <!-- <depend>tf2</depend> -->
+  <!-- <depend>tf2_ros</depend> -->
+  <!-- <depend>urdf</depend> -->
+
+  <!-- <exec_depend>gazebo</exec_depend> -->
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <!--TODO Must be added!-->
+    <!-- <realsense_gazebo_plugin plugin="${prefix}/gazebo_hardware_plugins.xml"/> -->
+    <realsense_ros2_gazebo plugin_path="${prefix}/lib" gazebo_media_path="${prefix}" gazebo_model_path="${prefix}/models" />
+  </export>
+</package>

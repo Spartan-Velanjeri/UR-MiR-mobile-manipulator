@@ -6,7 +6,7 @@
   <xacro:include filename="$(find mir_description)/urdf/include/sick_s300.urdf.xacro" />
   <xacro:include filename="$(find mir_description)/urdf/include/wheel.urdf.xacro" />
   <xacro:include filename="$(find mir_description)/urdf/include/caster.urdf.xacro" />
-  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
+  <!-- <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/> -->
   <xacro:include filename="$(find robotiq_description)/urdf/robotiq_85_gripper.urdf.xacro"/>
 
   <xacro:property name="deg_to_rad" value="0.017453293" />
@@ -358,9 +358,16 @@
       <origin xyz="0.035 0.05 0.03" rpy="0 ${pi} ${0.5 * pi}" />
     </joint> 
 
-    <xacro:sensor_d435i parent="ur_flange" name="realsense" use_nominal_extrinsics="true">
+    <!-- <xacro:sensor_d435i parent="ur_flange" name="realsense" use_nominal_extrinsics="true">
       <origin xyz="0.02 0 -0.061" rpy="${pi} 0 0"/>
-    </xacro:sensor_d435i>
+    </xacro:sensor_d435i> -->
+
+    <xacro:include filename="$(find realsense_ros2_gazebo)/xacro/depthcam.xacro"/>
+
+    <xacro:realsense_d435 sensor_name="d435" parent_link="ur_flange" rate="10">
+      <origin rpy="${pi} 0 0" xyz="0.02 0 -0.061"/>
+      <!-- <origin rpy="0 0 0 " xyz="0 0 0"/> -->
+    </xacro:realsense_d435>
 
     <!-- <link name="robotiq_coupler">
       <visual>
