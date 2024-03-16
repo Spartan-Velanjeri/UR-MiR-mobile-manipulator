@@ -6,7 +6,7 @@
   <xacro:include filename="$(find mir_description)/urdf/include/sick_s300.urdf.xacro" />
   <xacro:include filename="$(find mir_description)/urdf/include/wheel.urdf.xacro" />
   <xacro:include filename="$(find mir_description)/urdf/include/caster.urdf.xacro" />
-  <!-- <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/> -->
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
   <xacro:include filename="$(find robotiq_description)/urdf/robotiq_85_gripper.urdf.xacro"/>
 
   <xacro:property name="deg_to_rad" value="0.017453293" />
@@ -257,17 +257,15 @@
     <xacro:property name="initial_positions_file" default="$(arg initial_positions_file)"/>
 
     <!-- create link fixed to the "world" -->
-    <!-- <link name="world" />
+    <link name="world" />
     
     <joint name="world_joint" type="fixed">
       <parent link="${prefix}base_link" />
       <child link="world" />
       <origin xyz="0.135 0 0.79" rpy="0 0 ${0.5 * pi}" />
-    </joint> -->
+    </joint>
     
     
-    
-    <!-- ${prefix}base_link -->
     <!-- arm -->
     <xacro:ur_robot
       name="$(arg name)"
@@ -311,8 +309,8 @@
 
     <xacro:if value="$(arg sim_gazebo)">
       <!-- Gazebo plugins -->
-      <!-- <gazebo reference="world">
-      </gazebo> -->
+      <gazebo reference="world">
+      </gazebo>
       <gazebo>
         <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control_ur">
           <!-- <parameters>$(arg simulation_controllers)</parameters> -->
@@ -326,8 +324,8 @@
 
     <xacro:if value="$(arg sim_ignition)">
       <!-- Gazebo plugins -->
-      <!-- <gazebo reference="world">
-      </gazebo> -->
+      <gazebo reference="world">
+      </gazebo>
       <gazebo>
         <plugin filename="libign_ros2_control-system.so" name="ign_ros2_control::IgnitionROS2ControlPlugin">
           <parameters>$(arg simulation_controllers)</parameters>
@@ -358,16 +356,9 @@
       <origin xyz="0.035 0.05 0.03" rpy="0 ${pi} ${0.5 * pi}" />
     </joint> 
 
-    <!-- <xacro:sensor_d435i parent="ur_flange" name="realsense" use_nominal_extrinsics="true">
+    <xacro:sensor_d435i parent="ur_flange" name="realsense" use_nominal_extrinsics="true">
       <origin xyz="0.02 0 -0.061" rpy="${pi} 0 0"/>
-    </xacro:sensor_d435i> -->
-
-    <xacro:include filename="$(find realsense_ros2_gazebo)/xacro/depthcam.xacro"/>
-
-    <xacro:realsense_d435 sensor_name="d435" parent_link="ur_flange" rate="10">
-      <origin rpy="${pi} 0 0" xyz="0.02 0 -0.061"/>
-      <!-- <origin rpy="0 0 0 " xyz="0 0 0"/> -->
-    </xacro:realsense_d435>
+    </xacro:sensor_d435i>
 
     <!-- <link name="robotiq_coupler">
       <visual>

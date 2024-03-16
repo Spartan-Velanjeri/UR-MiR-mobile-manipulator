@@ -24,12 +24,43 @@ aluminum peripherial evaluation case.
 <robot name="sensor_d435i" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro"/>
   <xacro:include filename="$(find realsense2_description)/urdf/_d435i_imu_modules.urdf.xacro"/>
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435i_gazebo.xacro"/>
 
   <xacro:macro name="sensor_d435i" params="parent *origin name:=camera use_nominal_extrinsics:=false">
     <xacro:sensor_d435 parent="${parent}" name="${name}" use_nominal_extrinsics="${use_nominal_extrinsics}">
       <xacro:insert_block name="origin" />
     </xacro:sensor_d435>
     <xacro:d435i_imu_modules name="${name}" use_nominal_extrinsics="${use_nominal_extrinsics}"/>
+    <xacro:gazebo_d435i camera_name="${name}"
+                        topics_ns="camera"
+                        reference_link="${name}_link"
+
+                        depth_optical_frame="${name}_depth_optical_frame"
+                        depth_width="848"
+                        depth_height="480"
+                        depth_fps="60"
+
+                        color_optical_frame="${name}_color_optical_frame"
+                        color_width="1920"
+                        color_height="1080"
+                        color_fps="30"
+
+                        infrared1_optical_frame="${name}_left_ir_optical_frame"
+                        infrared2_optical_frame="${name}_right_ir_optical_frame"
+                        infra_width="848"
+                        infra_height="480"
+                        infra_fps="60"
+
+                        accel_optical_frame="${name}_accel_optical_frame"
+                        gyro_optical_frame="${name}_gyro_optical_frame"
+                        accel_fps="63"
+                        gyro_fps="200"
+
+                        enable_pointCloud="true"
+                        unite_imu_method="linear_interpolation"
+                        clip_distance="-1.0"
+                        align_depth="false"
+                        visualize="true"
+    />
   </xacro:macro>
 </robot>
-

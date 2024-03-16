@@ -1,14 +1,25 @@
+<?xml version="1.0"?>
+<!--
+Aknolegment: This file was originally copied from the realsense repository of
+pal-robotics-forks( https://github.com/pal-robotics-forks/realsense/ )
+and then modified.
+
+License: Apache 2.0. See LICENSE file in root directory.
+Copyright(c) 2017 PAL Robotics, S.L. All Rights Reserved
+
+This is the Gazebo URDF model for the Intel RealSense D435i camera
+-->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
     <xacro:macro name="gazebo_d435i" params=" reference_link
                                             camera_name:=camera
                                             topics_ns:=camera
 
-                                            depth_optical_frame
-                                            color_optical_frame
-                                            infrared1_optical_frame
-                                            infrared2_optical_frame
-                                            accel_optical_frame
-                                            gyro_optical_frame
+                                            depth_optical_frame:=camera_depth_optical_frame
+                                            color_optical_frame:=camera_color_optical_frame
+                                            infrared1_optical_frame:=camera__left_ir_optical_frame
+                                            infrared2_optical_frame:=camera__right_ir_optical_frame
+                                            accel_optical_frame:=camera_accel_optical_frame
+                                            gyro_optical_frame:=camera_gyro_optical_frame
 
                                             visualize:=false
                                             align_depth:=false
