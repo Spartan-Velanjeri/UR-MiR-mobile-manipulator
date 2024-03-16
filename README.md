@@ -67,4 +67,7 @@ ros2 launch mir_gazebo mobile_manipulator.launch.py world:=maze
 
 ### MoveIt2:
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true prefix:=ur_ use_fake_hardware:=true use_sim_time:=true
+
+### Aruco tag recognition
+ros2 launch ros2_aruco aruco_recognition.launch.py
 ```
