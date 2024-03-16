@@ -50,7 +50,7 @@ ros2 launch mir_navigation navigation.py use_sim_time:=true cmd_vel_w_prefix:=/d
 
 # Gazebo demo (Navigation with existing map)
 ```
-### gazebo
+### gazebo:
 ros2 launch mir_gazebo mobile_manipulator.launch.py world:=maze rviz_config_file:=$(ros2 pkg prefix mir_navigation)/share/mir_navigation/rviz/mir_nav.rviz
 
 
@@ -59,4 +59,12 @@ ros2 launch mir_navigation amcl.py use_sim_time:=true map:=$(ros2 pkg prefix mir
 
 ### navigation
 ros2 launch mir_navigation navigation.py use_sim_time:=true
+```
+# Manipulation using MoveIt2
+```
+### gazebo:
+ros2 launch mir_gazebo mobile_manipulator.launch.py world:=maze
+
+### MoveIt2:
+ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true prefix:=ur_ use_fake_hardware:=true use_sim_time:=true
 ```
