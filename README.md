@@ -1,5 +1,5 @@
 # mobile_manipulator
-This is a ROS2 package for MiR 250 + UR5e with ros2_control, Gazebo and Ignition Gazebo simulation.
+This is a ROS2 package for MiR 250 + UR5e + Realsense D435i with ros2_control, Gazebo and Ignition Gazebo simulation.
 
 # Installation
 
@@ -71,3 +71,9 @@ ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true
 ### Aruco tag recognition
 ros2 launch ros2_aruco aruco_recognition.launch.py
 ```
+
+## Acknowledgement
+
+The 3d files for MiR 250 is from [DFKI](https://github.com/DFKI-NI/mir_robot).
+The 3d model and plugins for UR5e are from [Universal_Robots_ROS2_Driver](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver).
+The Realsense plugin is from [PAL Robotics](https://github.com/pal-robotics/realsense_gazebo_plugin/tree/foxy-devel) and description from [Intel](https://github.com/IntelRealSense/realsense-ros).
