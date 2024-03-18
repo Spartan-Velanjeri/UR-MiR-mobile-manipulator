@@ -3,7 +3,7 @@
     This is a format for representing semantic information about the robot structure.
     A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
 -->
-<robot name="mir_100">
+<robot name="mir_250">
     <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
     <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
     <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
@@ -71,6 +71,7 @@
     <disable_collisions link1="bl_caster_rotation_link" link2="bl_caster_wheel_link" reason="Adjacent"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="br_caster_rotation_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="br_caster_wheel_link" reason="Never"/>
+    <disable_collisions link1="bl_caster_rotation_link" link2="camera_mount" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="fl_caster_rotation_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="fl_caster_wheel_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="fr_caster_rotation_link" reason="Never"/>
@@ -78,15 +79,16 @@
     <disable_collisions link1="bl_caster_rotation_link" link2="front_laser_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="left_wheel_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="power_unit" reason="Never"/>
+    <disable_collisions link1="bl_caster_rotation_link" link2="realsense_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="right_wheel_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="ur_base_link_inertia" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="ur_forearm_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="ur_shoulder_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="ur_upper_arm_link" reason="Never"/>
     <disable_collisions link1="bl_caster_rotation_link" link2="ur_wrist_1_link" reason="Never"/>
-    <disable_collisions link1="bl_caster_rotation_link" link2="ur_wrist_2_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="br_caster_rotation_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="br_caster_wheel_link" reason="Never"/>
+    <disable_collisions link1="bl_caster_wheel_link" link2="camera_mount" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="fl_caster_rotation_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="fl_caster_wheel_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="fr_caster_rotation_link" reason="Never"/>
@@ -94,6 +96,7 @@
     <disable_collisions link1="bl_caster_wheel_link" link2="front_laser_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="left_wheel_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="power_unit" reason="Never"/>
+    <disable_collisions link1="bl_caster_wheel_link" link2="realsense_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="right_wheel_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="ur_base_link_inertia" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="ur_forearm_link" reason="Never"/>
@@ -101,7 +104,9 @@
     <disable_collisions link1="bl_caster_wheel_link" link2="ur_upper_arm_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="ur_wrist_1_link" reason="Never"/>
     <disable_collisions link1="bl_caster_wheel_link" link2="ur_wrist_2_link" reason="Never"/>
+    <disable_collisions link1="bl_caster_wheel_link" link2="ur_wrist_3_link" reason="Never"/>
     <disable_collisions link1="br_caster_rotation_link" link2="br_caster_wheel_link" reason="Adjacent"/>
+    <disable_collisions link1="br_caster_rotation_link" link2="camera_mount" reason="Never"/>
     <disable_collisions link1="br_caster_rotation_link" link2="fl_caster_rotation_link" reason="Never"/>
     <disable_collisions link1="br_caster_rotation_link" link2="fl_caster_wheel_link" reason="Never"/>
     <disable_collisions link1="br_caster_rotation_link" link2="fr_caster_rotation_link" reason="Never"/>
@@ -116,6 +121,7 @@
     <disable_collisions link1="br_caster_rotation_link" link2="ur_shoulder_link" reason="Never"/>
     <disable_collisions link1="br_caster_rotation_link" link2="ur_upper_arm_link" reason="Never"/>
     <disable_collisions link1="br_caster_rotation_link" link2="ur_wrist_1_link" reason="Never"/>
+    <disable_collisions link1="br_caster_wheel_link" link2="camera_mount" reason="Never"/>
     <disable_collisions link1="br_caster_wheel_link" link2="fl_caster_rotation_link" reason="Never"/>
     <disable_collisions link1="br_caster_wheel_link" link2="fl_caster_wheel_link" reason="Never"/>
     <disable_collisions link1="br_caster_wheel_link" link2="fr_caster_rotation_link" reason="Never"/>
@@ -133,7 +139,8 @@
     <disable_collisions link1="br_caster_wheel_link" link2="ur_wrist_2_link" reason="Never"/>
     <disable_collisions link1="br_caster_wheel_link" link2="ur_wrist_3_link" reason="Never"/>
     <disable_collisions link1="camera_mount" link2="realsense_link" reason="Adjacent"/>
-    <disable_collisions link1="camera_mount" link2="ur_wrist_2_link" reason="Default"/>
+    <disable_collisions link1="camera_mount" link2="ur_wrist_1_link" reason="Never"/>
+    <disable_collisions link1="camera_mount" link2="ur_wrist_2_link" reason="Never"/>
     <disable_collisions link1="camera_mount" link2="ur_wrist_3_link" reason="Adjacent"/>
     <disable_collisions link1="fl_caster_rotation_link" link2="fl_caster_wheel_link" reason="Adjacent"/>
     <disable_collisions link1="fl_caster_rotation_link" link2="fr_caster_rotation_link" reason="Never"/>

@@ -161,7 +161,7 @@
           <xacro:get_mesh name="base" type="collision"/>
         </geometry>
       </collision>
-      <xacro:cylinder_inertial radius="${base_inertia_radius}" length="${base_inertia_length}" mass="0.01"> <!--${base_mass} -->
+      <xacro:cylinder_inertial radius="${base_inertia_radius}" length="${base_inertia_length}" mass="0.01"> <!--${base_mass} 0.01 -->
         <origin xyz="0 0 0" rpy="0 0 0" />
       </xacro:cylinder_inertial>
     </link>
@@ -178,7 +178,7 @@
           <xacro:get_mesh name="shoulder" type="collision"/>
         </geometry>
       </collision>
-      <xacro:cylinder_inertial radius="${shoulder_inertia_radius}" length="${shoulder_inertia_length}" mass="0.01"> <!-- ${shoulder_mass}-->
+      <xacro:cylinder_inertial radius="${shoulder_inertia_radius}" length="${shoulder_inertia_length}" mass="0.01"> <!-- ${shoulder_mass} 0.01-->
         <origin xyz="0 0 0" rpy="0 0 0" />
       </xacro:cylinder_inertial>
     </link>
