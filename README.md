@@ -60,3 +60,8 @@ ros2 launch mir_navigation amcl.py use_sim_time:=true map:=$(ros2 pkg prefix mir
 ### navigation
 ros2 launch mir_navigation navigation.py use_sim_time:=true
 ```
+# Notes
+
+1. If you get an error with respect to Gazebo Classic: Cannot launch gzclient on a launch file - results in shared_ptr assertion error, All you have to do is, source the gazebo classic. 
+
+    `. /usr/share/gazebo/setup.sh `

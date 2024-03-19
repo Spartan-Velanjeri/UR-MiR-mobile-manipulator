@@ -1,9 +1,0 @@
-/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg/CMakeFiles/uninstall.dir
-/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg/CMakeFiles/autogen_pkg_uninstall.dir
-/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg/CMakeFiles/test.dir
-/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg/CMakeFiles/edit_cache.dir
-/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg/CMakeFiles/rebuild_cache.dir
-/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg/CMakeFiles/list_install_components.dir
-/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg/CMakeFiles/install.dir
-/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg/CMakeFiles/install/local.dir
-/home/not_windows/Downloads/ROS2_Autogen/autogen_pkg/build/autogen_pkg/CMakeFiles/install/strip.dir
