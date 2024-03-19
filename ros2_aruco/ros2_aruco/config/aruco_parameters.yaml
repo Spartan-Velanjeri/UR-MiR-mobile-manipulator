@@ -1,0 +1,7 @@
+/aruco_node:
+  ros__parameters:
+    marker_size: 1.000 #.0155
+    aruco_dictionary_id: DICT_ARUCO_ORIGINAL
+    image_topic: /realsense/camera/color/image_raw
+    camera_info_topic: /realsense/camera/color/camera_info
+    camera_frame: realsense_color_optical_frame
