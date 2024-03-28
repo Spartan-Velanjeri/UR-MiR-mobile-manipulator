@@ -64,11 +64,7 @@ ros2 launch mir_navigation amcl.py use_sim_time:=true map:=$(ros2 pkg prefix mir
 ### navigation
 ros2 launch mir_navigation navigation.py use_sim_time:=true
 ```
-# Notes
 
-1. If you get an error with respect to Gazebo Classic: Cannot launch gzclient on a launch file - results in shared_ptr assertion error, All you have to do is, source the gazebo classic. 
-
-    `. /usr/share/gazebo/setup.sh `
 # Manipulation using MoveIt2
 ```
 ### gazebo:
@@ -87,4 +83,14 @@ The 3d files for MiR 250 is from [DFKI](https://github.com/DFKI-NI/mir_robot).
 The 3d model and plugins for UR5e are from [Universal_Robots_ROS2_Driver](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver).
 The Realsense plugin is from [PAL Robotics](https://github.com/pal-robotics/realsense_gazebo_plugin/tree/foxy-devel) and description from [Intel](https://github.com/IntelRealSense/realsense-ros).
 
-    `. /usr/share/gazebo/setup.sh `
+
+# Notes
+
+1. If you get an error with respect to Gazebo Classic: Cannot launch gzclient on a launch file - results in shared_ptr assertion error, 
+
+    All you have to do is, source the gazebo classic by`. /usr/share/gazebo/setup.sh`
+    and try again
+
+2. If you encounter an error with respect to launching the ur_moveit launch:  Exception caught while processing action 'loadRobotModel': parameter 'robot_description_planning.joint_limits.panda_joint1.max_velocity' has invalid type: Wrong parameter type, parameter {robot_description_planning.joint_limits.panda_joint1.max_velocity} is of type {double}, setting it to {string} is not allowed,
+
+    All you have to do is set `LC_NUMERIC=en_US.UTF-8` in your terminal and try again
