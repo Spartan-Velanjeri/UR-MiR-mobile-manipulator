@@ -25,7 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             'aruco_node = ros2_aruco.aruco_node:main',
-            'aruco_generate_marker = ros2_aruco.aruco_generate_marker:main'
+            'aruco_generate_marker = ros2_aruco.aruco_generate_marker:main',
+            'aruco_pose_to_nav_goal = ros2_aruco.aruco_pose_to_nav_goal:main',
         ],
     },
 )
