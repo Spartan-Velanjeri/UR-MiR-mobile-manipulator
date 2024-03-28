@@ -103,4 +103,3 @@ The 3d files for MiR 250 is from [DFKI](https://github.com/DFKI-NI/mir_robot).
 The 3d model and plugins for UR5e are from [Universal_Robots_ROS2_Driver](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver).
 The Realsense plugin is from [PAL Robotics](https://github.com/pal-robotics/realsense_gazebo_plugin/tree/foxy-devel) and description from [Intel](https://github.com/IntelRealSense/realsense-ros).
 
-    `. /usr/share/gazebo/setup.sh `
