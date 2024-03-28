@@ -73,9 +73,29 @@ ros2 launch mir_gazebo mobile_manipulator.launch.py world:=maze
 ### MoveIt2:
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true prefix:=ur_ use_fake_hardware:=true use_sim_time:=true
 
-### Aruco tag recognition
+### Gazebo Aruco model path (Also put in the src/mir_robot/mir_gazebo/worlds/include folder)
+/install/mir_gazebo/share/mir_gazebo/worlds/include/marker_0001
+
+### Aruco tag recognition (Make sure to add camera img to Rviz before running this)
 ros2 launch ros2_aruco aruco_recognition.launch.py
+
+### Aruco posa to nav2 goal
+ros2 run ros2_aruco aruco_pose_to_nav_goal
+
+### Origin pose to nav2 goal
+./src/mir_robot/mir_navigation/nav2_test.py 
+
+
 ```
+
+# Notes
+
+1. If you get an error with respect to Gazebo Classic: Cannot launch gzclient on a launch file - results in shared_ptr assertion error, All you have to do is, source the gazebo classic. 
+
+    `. /usr/share/gazebo/setup.sh `
+2. If you get an error about gazebo already open elsewhere, run this -
+
+    `killall gzserver `
 
 ## Acknowledgement
 

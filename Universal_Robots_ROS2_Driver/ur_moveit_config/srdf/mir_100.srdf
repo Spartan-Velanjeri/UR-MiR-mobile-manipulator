@@ -29,6 +29,22 @@
         <joint name="ur_wrist_2_joint" value="-1.6603"/>
         <joint name="ur_wrist_3_joint" value="0"/>
     </group_state>
+    <group_state name="aruco" group="ur_manipulator">
+        <joint name="ur_elbow_joint" value="0"/>
+        <joint name="ur_shoulder_lift_joint" value="-1.57"/>
+        <joint name="ur_shoulder_pan_joint" value="-1.57"/>
+        <joint name="ur_wrist_1_joint" value="-1.3083"/>
+        <joint name="ur_wrist_2_joint" value="-1.57"/>
+        <joint name="ur_wrist_3_joint" value="0"/>
+    </group_state>
+    <group_state name="feedback" group="ur_manipulator">
+        <joint name="ur_elbow_joint" value="0"/>
+        <joint name="ur_shoulder_lift_joint" value="-1.57"/>
+        <joint name="ur_shoulder_pan_joint" value="-1.57"/>
+        <joint name="ur_wrist_1_joint" value="-0.3488"/>
+        <joint name="ur_wrist_2_joint" value="-1.57"/>
+        <joint name="ur_wrist_3_joint" value="0"/>
+    </group_state>
     <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
     <passive_joint name="bl_caster_rotation_joint"/>
     <passive_joint name="bl_caster_wheel_joint"/>

@@ -7,6 +7,14 @@
   <maintainer email="nathan.r.sprague@gmail.com">Nathan Sprague</maintainer>
   <license>TODO: License declaration</license>
 
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>ros2_aruco_interfaces</depend> <!-- Only if you are using custom messages -->
+  <depend>nav2_simple_commander</depend> <!-- If you're using this for navigation -->
+
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
