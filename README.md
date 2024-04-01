@@ -79,14 +79,20 @@ ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true
 ### Aruco tag recognition (Make sure to add camera img to Rviz before running this)
 ros2 launch ros2_aruco aruco_recognition.launch.py
 
-### Aruco posa to nav2 goal
+### Aruco pose to nav2 goal
 ros2 run ros2_aruco aruco_pose_to_nav_goal
 
-### Aruco posa to manipulator goal
+### Aruco pose to manipulator goal
 ros2 run ros2_aruco aruco_pose_to_manipulate
 
 ### Origin pose to nav2 goal
 ./src/mir_robot/mir_navigation/nav2_test.py 
+
+### Tranform aruco pose to ur_base_link
+ros2 run ros2_aruco aruco_pose_to_moveit
+
+### hello_ur_moveit
+ros2 launch hello_moveit_ur hello_moveit_ur_launch.py 
 
 
 ```
