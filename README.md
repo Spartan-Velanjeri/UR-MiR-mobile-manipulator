@@ -11,6 +11,12 @@ This is a ROS2 package for MiR 250 + UR5e + Realsense D435i with ros2_control, G
 ## ROS2
 If you haven't already installed [ROS2](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) on your PC, you need to add the ROS2 apt repository.
 
+Also install ros2-control and ros2-controllers
+
+```
+sudo apt-get install ros-humble-ros2-control
+sudo apt-get install ros-humble-ros2-controllers
+```
 ## Source install
 ```
 # create a ros2 workspace
@@ -22,7 +28,7 @@ git clone https://github.com/Spartan-Velanjeri/UR-MiR-mobile-manipulator.git src
 
 # use vcs to fetch linked repos
 # $ sudo apt install python3-vcstool
-vcs import < src/mir_robot/ros2.repos src --recursive
+vcs import < src/mir_robot/mir_robot/ros2.repos src --recursive
 
 # use rosdep to install all dependencies (including ROS itself)
 sudo apt update
