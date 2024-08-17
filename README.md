@@ -18,7 +18,7 @@ mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/
 
 # clone mir_robot into the ros2 workspace
-git clone https://git.rwth-aachen.de/rudresh.lonkar/mir_250_ros2/ src/mir_robot
+git clone https://github.com/Spartan-Velanjeri/UR-MiR-mobile-manipulator.git src/mir_robot
 
 # use vcs to fetch linked repos
 # $ sudo apt install python3-vcstool
