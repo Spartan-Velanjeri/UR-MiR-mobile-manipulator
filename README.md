@@ -45,10 +45,14 @@ You must source the workspace in each terminal you want to work in:
 ```
 source ~/ros2_ws/install/setup.bash
 ```
+Also make sure to run this in order to avoid problems with Gazebo (SEE NOTES)
+```
+. /usr/share/gazebo/setup.sh
+```
 
 # Gazebo demo (mapping)
 ```
-### gazebo:
+### gazebo: 
 ros2 launch mir_gazebo mobile_manipulator.launch.py world:=maze
 
 ### mapping (slam_toolbox)
